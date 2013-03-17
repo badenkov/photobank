@@ -4,8 +4,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.beta1'
 
 gem 'sqlite3'
+gem 'mysql2'
 
 gem 'jquery-rails'
+gem 'slim-rails'
+gem 'simple_form'
+gem 'simple-navigation'
+gem 'carrierwave'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -17,6 +22,7 @@ gem 'jbuilder', '~> 1.0.1'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
+  gem 'bootstrap-sass'
   gem 'coffee-rails', '~> 4.0.0.beta1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -26,6 +32,9 @@ group :assets do
 end
 
 group :development do
+  gem 'quiet_assets'
+  gem 'letter_opener'
+  gem 'thin'
   # To use debugger
   # gem 'debugger'
   # Deploy with Capistrano

@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title Photobank
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="description" content=""
+    meta name="author" content=""
+
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+body
+  .container
+    .masthead
+      h3.muted Photobank
+      .navbar
+        .navbar-inner
+          .container
+            = render_navigation
+
+    .row-fluid
+      .span12
+        = yield
+
+    hr
+
+    .footer
+      p &copy; Company 2013
+

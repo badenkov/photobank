@@ -1,0 +1,13 @@
+= simple_form_for(@photo) do |f|
+  - if @photo.errors.any?
+    #error_explanation
+      h2 #{pluralize(@photo.errors.count, "error")} prohibited this photo from being saved:
+      ul
+        - @photo.error.full_messages.each do |msg|
+          li = msg
+
+  = f.input :title
+  = f.input :photo
+
+  div
+    = f.submit
