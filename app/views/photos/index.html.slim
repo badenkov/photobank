@@ -11,6 +11,8 @@ ul.thumbnails
           = link_to 'Destroy', photo, method: :delete, data: { confirm: 'Вы уверены?' }
 
 
+= paginate @photos
+
 br
 
 = link_to 'New Photo', new_photo_path
